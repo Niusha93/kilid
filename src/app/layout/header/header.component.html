@@ -1,0 +1,15 @@
+<div class="navbar-container" dir="rtl">
+    <div class="side-menu"  fxShow fxHide.gt-md>
+        <button mat-icon-button (click)="onToggleOpenSideNav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="nav-buttons" fxShow fxHide.lt-md>
+        <button class="white-btn">ورود</button>
+        <button class="dark-red-btn">ثبت نام</button>
+    </div>
+    <app-navtabs fxShow fxHide.lt-lg class="nav-tabs"></app-navtabs>
+    <div class="logo-container">
+        <img class="logo" src="../../../assets/images/logo.png">
+    </div>
+</div>

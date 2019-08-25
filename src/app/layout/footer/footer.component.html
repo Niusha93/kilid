@@ -1,0 +1,83 @@
+<div style="background-image:url('../../../assets/images/footer-bg.png');display: flex;" fxShow fxHide.lt-md>
+    
+    <div class="text-white" style="flex: 2">
+        <ul class="hide-ul-style">
+            <li class="li-header">کیلید</li>
+            <li>درباره کیلید</li>
+            <li>بلاگ</li>
+            <li>تماس با ما</li>
+            <li>فرصت های شغلی</li>
+            <li>آژانس های املاک</li>
+            <li>تبلیغات</li>
+        </ul>
+    </div>
+    <div class="text-white" style="flex: 2">
+        <ul class="hide-ul-style">
+            <li class="li-header">جستجو</li>
+            <li>خرید</li>
+            <li>رهن و اجاره</li>
+            <li>چستجو روی نقشه</li>
+            <li>سپردن ملک</li>
+        </ul>
+    </div>
+    <div class="text-white" style="flex: 2">
+        <ul class="hide-ul-style">
+            <li class="li-header">اطلاعات کلیدی</li>
+            <li>قیمت خانه شما</li>
+            <li>فرصت های بازار مسکن</li>
+        </ul>
+    </div>
+    <div class="text-white" style="flex: 2">
+        <ul class="hide-ul-style">
+            <li class="li-header">اپلیکیش</li>
+            <li>مشاورین (iOS,
+                Android)</li>
+            <li>اربران (iOS, Android)</li>
+        </ul>
+    </div>
+    <div style="flex:4">
+   
+    </div>
+</div>
+<div class="text-white" style="background-image:url('../../../assets/images/footer-bg.png')" fxShow fxHide.gt-sm>
+    <div>
+        <mat-form-field class="padding-right-50">
+        <mat-label>کیلید</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let kilid of kilids" [value]="kilid.value">
+            {{kilid.viewValue}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="padding-right-50">
+        <mat-label>جستجو</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let search of searchs" [value]="search.value">
+            {{search.viewValue}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="padding-right-50">
+        <mat-label>اطلاعات کلیدی</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let info of infos" [value]="info.value">
+            {{info.viewValue}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="padding-right-50">
+        <mat-label>اپلیکیش</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let app of apps" [value]="app.value">
+            {{app.viewValue}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+</div>

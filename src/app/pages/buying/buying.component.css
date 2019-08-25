@@ -1,0 +1,252 @@
+.background-image-container {
+  background-color: #A7A7A7;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../../../assets/images/background.jpg);
+  background-position: bottom left;
+  background-size: cover;
+}
+
+.home-price-container {
+  background-color: rgb(100, 97, 97);
+  display: flex;
+  align-items: baseline;
+}
+
+.home-price-container-md {
+  background-color: rgb(100, 97, 97);
+  align-items: baseline;
+}
+
+.search-input-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  margin: 15px 0px 15px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.search-icon {
+  padding: 10px;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 15px 0px 0px 15px !important;
+  background-color: #921D4D;
+  cursor: pointer;
+  border-style: none;
+  outline: none !important;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 0px 15px 15px 0px !important;
+  border-style: none;
+  text-align: start;
+}
+
+.buy-house {
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+.home-price-btn {
+  height: 40px !important;
+  flex: 6;
+  margin: 0 auto;
+  display: block;
+}
+
+.home-price {
+  line-height: 80px;
+  flex: 3;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .search-input-container {
+    width: 350px;
+  }
+}
+
+.card-container {
+  position: relative;
+  padding: 40px;
+  background: #fff;
+}
+
+.card-container:before {
+  position: absolute;
+  height: 50%;
+  background: #921d4d;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card .card-detail {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  padding: 10px 50px;
+}
+
+.card .card-detail:first-child {
+  border-left: 0px;
+}
+
+.card-detail .header i {
+  font-size: 50px;
+}
+
+.card-detail a {
+  margin-top: 35px;
+}
+
+
+
+
+.cellphone-image-container {
+  padding: 30px;
+  display: flex;
+}
+
+.cellphone-image-container .cellphone-image {
+  flex: 2;
+  direction: ltr;
+  text-align: center;
+}
+
+.cellphone-image .cell-phone-map {
+  width: 300px;
+}
+
+
+.cellphone-image .cell-phone-dec {
+  width: 240px;
+  margin-left: 20px;
+}
+
+.cellphone-image-container .app-link {
+  align-self: center;
+  flex: 2;
+  text-align: center;
+}
+
+.app-link .store-link{
+  margin: 0 5px;
+}
+@media only screen and (max-width: 480px) {
+  .cellphone-image-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+   .cellphone-image {
+    margin-top: 35px;
+  }
+  
+  .cellphone-image .cell-phone-map {
+    width: 160px !important;
+  } 
+  
+  .cellphone-image .cell-phone-dec {
+    width: 125px !important;
+  }
+
+  .app-link{
+    flex: 0 0 100% !important;
+  }
+  .app-link .store-link{
+    width: 120px;
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  .cellphone-image-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+   .cellphone-image {
+    margin-top: 35px;
+  }
+  
+  .cellphone-image .cell-phone-map {
+    width: 210px;
+  } 
+  
+  .cellphone-image .cell-phone-dec {
+    width: 160px;
+  }
+
+  .app-link{
+    flex: 0 0 100% !important;
+  }
+  .app-link .store-link{
+    width: 120px;
+  }
+}  
+
+@media only screen and (min-width: 768px) {
+  .cellphone-image-container .cellphone-image {
+    flex-basis: 100%;
+    flex: 2;
+  }
+  
+  .cellphone-image .cell-phone-map {
+    width: 190px;
+  } 
+  
+  .cellphone-image .cell-phone-dec {
+    width: 140px;
+  }
+
+  .app-link{
+    flex-basis: 100%;
+  }
+  .app-link .store-link{
+    width: 130px;
+    margin: 0 5px;
+  }
+} 
+
+@media only screen and (min-width: 992px) {
+  .cellphone-image-container .cellphone-image {
+    flex: 2;
+  }
+  
+  .cellphone-image .cell-phone-map {
+    width: 250px;
+  } 
+  
+  .cellphone-image .cell-phone-dec {
+    width: 200px;
+  }
+} 
+
+@media only screen and (min-width: 1200px) {
+  .cellphone-image-container .cellphone-image {
+    flex: 2;
+  }
+  
+} 
+
+
