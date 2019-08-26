@@ -149,10 +149,10 @@ h6{
     color: white !important;
 }
 
-.mat-form-field-infix * {
+.footer-dropdown .mat-form-field-infix * {
     color: #fff;
 }
 
-.mat-form-field-underline {
+.footer-dropdown .mat-form-field-underline {
     background: #fff !important;
 }

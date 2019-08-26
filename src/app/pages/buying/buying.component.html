@@ -54,9 +54,10 @@
 </div>
 <div class="city-selection">
   <div class="city-dropdown">
-    <mat-label>نام شهر مورد نظر خود را انتخاب کنید : </mat-label>
+    
 
     <mat-form-field>
+      <mat-label>نام شهر مورد نظر خود را انتخاب کنید </mat-label>
       <mat-select class="dropdown">
         <mat-option *ngFor="let food of cities" [value]="food.id">
           {{ food.title }}
