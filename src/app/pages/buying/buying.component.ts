@@ -1,27 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { CityService } from "src/app/services/city.service";
 
 @Component({
-  selector: 'app-buying',
-  templateUrl: './buying.component.html',
-  styleUrls: ['./buying.component.css']
+  selector: "app-buying",
+  templateUrl: "./buying.component.html",
+  styleUrls: ["./buying.component.css"]
 })
 export class BuyingComponent implements OnInit {
-  cities = [
-    { value: 'تهران', viewValue: 'تهران' },
-    { value: 'اصفهان', viewValue: 'اصفهان' },
-    { value: 'بابل', viewValue: 'بابل' },
-    { value: 'لاهیجان', viewValue: 'لاهیجان' },
-    ];
-
-    search: string;
-  constructor() { }
+  cities = [];
+  search: string;
+  constructor(private cityService: CityService) {}
 
   ngOnInit() {
+    this.loadCities();
   }
 
+  loadCities() {
+    this.cityService.getAll().subscribe(result => {
+      this.cities = result;
+      console.log(this.cities);
+    });
+  }
   searchHome(): void {
-    if (this.search !== '') {
+    if (this.search !== "") {
     }
   }
-
 }

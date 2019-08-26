@@ -1,82 +1,127 @@
 <div class="background-image-container">
   <div class="buy-house ">
     <h4>خرید خانه با کیلید</h4>
-    <p class="margin-top-0 font-size-15"> کلید شما را در یافتن خانه یاری می کند</p>
+    <p class="margin-top-0 font-size-15">
+      کلید شما را در یافتن خانه یاری می کند
+    </p>
   </div>
   <div class="search-input-container">
-    <input class="search-input" type="text" placeholder="نام محله، منطقه و یا ایستگاه مترو مورد نظر را پیدا کنید">
-    <button name="search" (click)="searchHome()" class="search-icon material-icons">search</button>
+    <input
+      class="search-input"
+      type="text"
+      placeholder="نام محله، منطقه و یا ایستگاه مترو مورد نظر را پیدا کنید"
+    />
+    <button
+      name="search"
+      (click)="searchHome()"
+      class="search-icon material-icons"
+    >
+      search
+    </button>
   </div>
 </div>
 <div class="home-price-container text-white" fxShow fxHide.lt-md>
   <div class="home-price">قیمت خانه شما امروز چند است؟</div>
   <div class="flex-5">
-    <button class="home-price-btn" mat-raised-button color="primary">قیمت خانه شما</button>
+    <button class="home-price-btn" mat-raised-button color="primary">
+      قیمت خانه شما
+    </button>
   </div>
 </div>
 <div class="home-price-container-md text-white" fxShow fxHide.gt-sm>
   <div class="text-center">
-    <button class="margin-20" mat-raised-button color="primary">اطلاعات بازار مسکن</button>
+    <button class="margin-20" mat-raised-button color="primary">
+      اطلاعات بازار مسکن
+    </button>
   </div>
-  <div class="text-center padding-bottom-20">در صورتی که به اطلاعات بازار مسکن علاقه مندید
-    می توانید از آدرس بالا استفاده کنید</div>
+  <div class="text-center padding-bottom-20">
+    در صورتی که به اطلاعات بازار مسکن علاقه مندید می توانید از آدرس بالا استفاده
+    کنید
+  </div>
 </div>
 <div style="background-color: #e7e6e6; ">
   <div style="padding: 10px 50px 10px 50px">
-    <h4 class="text-right color-dark-red"><b>ارزیابی هوشمند قیمت ملک چیست؟</b></h4>
-    <p class="text-right">این سیستم با تحلیل اطلاعات جامع قادر به تخمین قیمت ملک با خطای کمتر از 10 درصد تنها
-      با استفاده از کد پستی ملک مورد نظر است
-      ارزیابی هوشمند قیمت ملک کیلید به سادگی قابل استفاده برای عموم مردم و همچنین علاقه مندان به سرمایه گذرای در
-      بازار مسکن است</p>
+    <h4 class="text-right color-dark-red">
+      <b>ارزیابی هوشمند قیمت ملک چیست؟</b>
+    </h4>
+    <p class="text-right">
+      این سیستم با تحلیل اطلاعات جامع قادر به تخمین قیمت ملک با خطای کمتر از 10
+      درصد تنها با استفاده از کد پستی ملک مورد نظر است ارزیابی هوشمند قیمت ملک
+      کیلید به سادگی قابل استفاده برای عموم مردم و همچنین علاقه مندان به سرمایه
+      گذرای در بازار مسکن است
+    </p>
   </div>
 </div>
+<div class="city-selection">
+  <div class="city-dropdown">
+    <mat-label>نام شهر مورد نظر خود را انتخاب کنید : </mat-label>
 
+    <mat-form-field>
+      <mat-select class="dropdown">
+        <mat-option *ngFor="let food of cities" [value]="food.id">
+          {{ food.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
 <div class="cellphone-image-container">
   <div class="app-link">
-    <h4 class="text-right text-center color-dark-red">کیلید خود را همیشه همراه داشته باشید</h4>
+    <h4 class="text-right text-center color-dark-red">
+      کیلید خود را همیشه همراه داشته باشید
+    </h4>
     <p>دریافت اپلیکیشن کیلید</p>
-    <img class="store-link" alt="" src="../../../assets/images/google-play-badge.png">
-    <img class="store-link" alt="" src="../../../assets/images/app-store.png">
+    <img
+      class="store-link"
+      alt=""
+      src="../../../assets/images/google-play-badge.png"
+    />
+    <img class="store-link" alt="" src="../../../assets/images/app-store.png" />
   </div>
   <div class="cellphone-image">
-    <img class="cell-phone-map" alt="" src="../../../assets/images/app-info-android-device-img.png">
-    <img class="cell-phone-dec" alt="" src="../../../assets/images/app-info-iphone-img.png">
-
+    <img
+      class="cell-phone-map"
+      alt=""
+      src="../../../assets/images/app-info-android-device-img.png"
+    />
+    <img
+      class="cell-phone-dec"
+      alt=""
+      src="../../../assets/images/app-info-iphone-img.png"
+    />
   </div>
 </div>
-
-
 
 <div class="card-container" fxShow fxHide.lt-md>
   <mat-card class="card">
     <div class="card-detail">
       <div class="header"><i class="material-icons">gps_fixed</i></div>
       <h4>قیمت خانه شما</h4>
-      <p>سامانه ارزیابی هوشمند کیلید ابزاری است که به
-        کمک آن می توانید قیمت خانه ی خود را تخمین
-        بزنید. این سیستم مبتنی بر روش های پیچیده
-        هوش مصنوعی بوده و قیمت خانه ی شما را به
-        صورت خودکار محاسبه می کند</p>
+      <p>
+        سامانه ارزیابی هوشمند کیلید ابزاری است که به کمک آن می توانید قیمت خانه
+        ی خود را تخمین بزنید. این سیستم مبتنی بر روش های پیچیده هوش مصنوعی بوده
+        و قیمت خانه ی شما را به صورت خودکار محاسبه می کند
+      </p>
       <a mat-raised-button routerLink=".">بیشتر... </a>
     </div>
     <div class="card-detail">
       <div class="header"><i class="material-icons">gps_fixed</i></div>
       <h4>سپردن خانه در کیلید</h4>
-      <p>با کیلید بدون حضور حتی یک مشاور خانه ی خود
-        را به فروش برسانید. کیلید با ارائه یک پلت فرم
-        جذاب و با کمک مشاوران املاک حرفه ای خود،
-        ملک شما را به سرعت در اختیار متقاضیان قرار می
-        دهد</p>
+      <p>
+        با کیلید بدون حضور حتی یک مشاور خانه ی خود را به فروش برسانید. کیلید با
+        ارائه یک پلت فرم جذاب و با کمک مشاوران املاک حرفه ای خود، ملک شما را به
+        سرعت در اختیار متقاضیان قرار می دهد
+      </p>
       <a mat-raised-button routerLink=".">بیشتر... </a>
     </div>
     <div class="card-detail">
       <div class="header"><i class="material-icons">gps_fixed</i></div>
       <h4>فرصت های بازار مسکن</h4>
-      <p>فرصت جایی مطرح می گردد که بتوان با کمک
-        داده ها و اطلاعات موجود، برای آینده فرصت
-        سازی کنیم. با اطلاعات دقیقی که در اختیارتان قرار
-        می گیرد، با اطمینان بیشتری برای آینده سرمایه
-        خود یک "تصمیم درست" بگیرید</p>
+      <p>
+        فرصت جایی مطرح می گردد که بتوان با کمک داده ها و اطلاعات موجود، برای
+        آینده فرصت سازی کنیم. با اطلاعات دقیقی که در اختیارتان قرار می گیرد، با
+        اطمینان بیشتری برای آینده سرمایه خود یک "تصمیم درست" بگیرید
+      </p>
       <a mat-raised-button routerLink=".">بیشتر... </a>
     </div>
   </mat-card>
@@ -87,11 +132,11 @@
     <div class="card-detail">
       <div class="header"><i class="material-icons">gps_fixed</i></div>
       <h4>اطلاعات بازار مسکن</h4>
-      <p>هدف از سیستم ارزیابی و برآورد
-        ر نظام قیمت گذاری هوشمند قیمت تغ
-        بازار نیست، و بالعکس به دنبال
-        انعکاس قیمت بازار بر مبنای املاک
-        معامله شده که در دسترس بوده است</p>
+      <p>
+        هدف از سیستم ارزیابی و برآورد ر نظام قیمت گذاری هوشمند قیمت تغ بازار
+        نیست، و بالعکس به دنبال انعکاس قیمت بازار بر مبنای املاک معامله شده که
+        در دسترس بوده است
+      </p>
       <a mat-raised-button routerLink=".">بیشتر... </a>
     </div>
   </mat-card>
